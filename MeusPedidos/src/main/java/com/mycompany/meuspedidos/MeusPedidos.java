@@ -22,5 +22,7 @@ public class MeusPedidos {
         System.out.println("Cliente: " + pedido.getCliente().getCpf()+ "," 
          + pedido.getCliente().getNome());
         
+        System.out.println("Total :" + pedido.getTotal());
+        
     }
 }
