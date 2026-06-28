@@ -18,6 +18,9 @@ public class MeusPedidos {
         pedido.setCliente(cliente);
         pedido.setTotal(produto.getPreco() + produto2.getPreco());
         
+        System.out.println("Pedido");
+        System.out.println("Cliente: " + pedido.getCliente().getCpf()+ "," 
+         + pedido.getCliente().getNome());
         
     }
 }
