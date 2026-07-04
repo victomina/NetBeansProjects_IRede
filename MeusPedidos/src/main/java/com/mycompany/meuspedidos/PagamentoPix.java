@@ -8,12 +8,12 @@ public class PagamentoPix extends Pagamento {
 
     @Override
     public void processar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Gerando chave Pix...");
     }
 
     @Override
     public double calcularTaxa() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return 0;
     }
     
 }
