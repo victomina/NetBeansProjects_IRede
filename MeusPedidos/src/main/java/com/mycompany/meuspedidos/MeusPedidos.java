@@ -18,11 +18,14 @@ public class MeusPedidos {
         pedido.setCliente(cliente);
         pedido.setTotal(produto.getPreco() + produto2.getPreco());
         
-        System.out.println("Pedido");
+        System.out.println("Pedido  ");
         System.out.println("Cliente: " + pedido.getCliente().getCpf()+ "," 
          + pedido.getCliente().getNome());
         
-        System.out.println("Total :" + pedido.getTotal());
+        System.out.println("Total : " + pedido.getTotal());
         
+        PagamentoCartao pagamentoCartao = new PagamentoCartao(pedido.getTotal(), 3);
+        pagamentoCartao.processar();
+        System.out.println("Valor Final " + pagamentoCartao.valorFinal());
     }
 }

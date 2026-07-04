@@ -1,3 +1,7 @@
+com\mycompany\meuspedidos\PagamentoPix.class
+com\mycompany\meuspedidos\Pagamento.class
 com\mycompany\meuspedidos\Cliente.class
-com\mycompany\meuspedidos\MeusPedidos.class
 com\mycompany\meuspedidos\Produto.class
+com\mycompany\meuspedidos\Pedido.class
+com\mycompany\meuspedidos\MeusPedidos.class
+com\mycompany\meuspedidos\PagamentoCartao.class
