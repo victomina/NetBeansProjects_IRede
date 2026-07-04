@@ -6,16 +6,25 @@ public class Pedido {
     
     private Cliente cliente;
     private List<ItemPedido> itens;
-    private double total;
+    
     
     public Pedido(Cliente cliente, double total) {
         this.cliente = cliente;
-        this.total = total;
+      }
+
+    Pedido(Cliente newCliente) {
+        this.cliente = newCliente;
     }
 
     public void adicionarItem(Produto produto, int quantidade){
         ItemPedido itempedido = new ItemPedido(produto,quantidade);
         itempedido.add(itempedido);
+    }
+    
+    public void exibirProdutos(){
+        for(ItemPedido item : itens){
+            System.out.println(item.getProduto().getNomme() + " " + item.getProduto().getPreco());
+        }
     }
     
     public double calcularTotal(){
@@ -37,12 +46,5 @@ public class Pedido {
         this.cliente = cliente;
     }
 
-    public double getTotal() {
-        return total;
-    }
-
-    public void setTotal(double total) {
-        this.total = total;
-    }
-    
+       
 }
