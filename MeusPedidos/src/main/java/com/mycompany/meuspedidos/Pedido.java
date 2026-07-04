@@ -23,7 +23,10 @@ public class Pedido {
     
     public void exibirProdutos(){
         for(ItemPedido item : itens){
-            System.out.println(item.getProduto().getNomme() + " " + item.getProduto().getPreco());
+            System.out.println(item.getProduto().getNomme() + " | "
+                    + "Valor do Item:" + item.getProduto().getPreco()+ " | "+
+                    item.getProduto().getPreco() + " | " +
+                    item.calcularSubtotal());
         }
     }
     

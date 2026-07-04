@@ -21,7 +21,7 @@ public class MeusPedidos {
         System.out.println("Pedido  ");
         System.out.println("Cliente: " + pedido.getCliente().getCpf()+ "," 
          + pedido.getCliente().getNome());
-        
+        pedido.exibirProdutos();
         System.out.println("Total : " + pedido.calcularTotal());
         
         PagamentoCartao pagamentoCartao = new PagamentoCartao(pedido.calcularTotal(), 3);
