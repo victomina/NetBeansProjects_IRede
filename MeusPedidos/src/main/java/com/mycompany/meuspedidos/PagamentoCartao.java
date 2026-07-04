@@ -8,15 +8,16 @@ public class PagamentoCartao extends Pagamento {
         super(valor);
         this.parcelas = parcelas;
     }
-        
+            
     @Override
     public void processar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        System.out.println("Processando cartão em:" + parcelas + "vezes");
     }
 
     @Override
     public double calcularTaxa() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        // condicao ? resultado positivo : resultado_ negativo
+        return parcelas > 1 ? valor * 0.02 : 0;
     }
     
 }
