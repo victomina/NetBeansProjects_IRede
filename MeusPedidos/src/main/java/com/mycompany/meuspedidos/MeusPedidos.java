@@ -24,6 +24,8 @@ public class MeusPedidos {
         
         System.out.println("Total : " + pedido.getTotal());
         
+        
+        
         PagamentoCartao pagamentoCartao = new PagamentoCartao(pedido.getTotal(), 3);
         pagamentoCartao.processar();
         System.out.println("Valor Final " + pagamentoCartao.valorFinal());

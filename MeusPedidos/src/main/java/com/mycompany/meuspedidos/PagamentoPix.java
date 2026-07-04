@@ -15,5 +15,13 @@ public class PagamentoPix extends Pagamento {
     public double calcularTaxa() {
         return 0;
     }
+
+    @Override
+    public double valorFinal() {
+        double valorParcial = super.valorFinal();
+        double valorDesconto = valor * 0.1;
+        return valorParcial - valorDesconto;
+    }
+     
     
 }
