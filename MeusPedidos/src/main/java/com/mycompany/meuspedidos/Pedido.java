@@ -1,5 +1,6 @@
 package com.mycompany.meuspedidos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pedido {
@@ -8,13 +9,14 @@ public class Pedido {
     private List<ItemPedido> itens;
     
     
-    public Pedido(Cliente cliente, double total) {
+    public Pedido(Cliente cliente) {
         this.cliente = cliente;
+        this.itens = new ArrayList<>();
       }
 
-    Pedido(Cliente newCliente) {
-        this.cliente = newCliente;
-    }
+//    public Pedido(Cliente newCliente) {
+//        this.cliente = newCliente;
+//    }
 
     public void adicionarItem(Produto produto, int quantidade){
         ItemPedido itempedido = new ItemPedido(produto,quantidade);
@@ -23,9 +25,9 @@ public class Pedido {
     
     public void exibirProdutos(){
         for(ItemPedido item : itens){
-            System.out.println(item.getProduto().getNomme() + " | "
-                    + "Valor do Item:" + item.getProduto().getPreco()+ " | "+
-                    item.getProduto().getPreco() + " | " +
+            System.out.println(item.getQuantidade() + " | " +
+                    item.getProduto().getNomme() + " | "
+                    + "Valor do Item:" + item.getProduto().getPreco()+ " | " +
                     item.calcularSubtotal());
         }
     }
