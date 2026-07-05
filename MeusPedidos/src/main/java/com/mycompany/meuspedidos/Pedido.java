@@ -14,13 +14,9 @@ public class Pedido {
         this.itens = new ArrayList<>();
       }
 
-//    public Pedido(Cliente newCliente) {
-//        this.cliente = newCliente;
-//    }
-
     public void adicionarItem(Produto produto, int quantidade){
         ItemPedido itempedido = new ItemPedido(produto,quantidade);
-        itempedido.add(itempedido);
+        itens.add(itempedido);// adiciona o produto e a quantidade na lista de itens pedidos
     }
     
     public void exibirProdutos(){
