@@ -31,6 +31,6 @@ public class PlaygroundErros {
             System.out.println("Dados Inválidos ... ");
         }catch(Exception e){
             System.out.println("Erro inesperado ...");
-        
+        }
     }
 }
