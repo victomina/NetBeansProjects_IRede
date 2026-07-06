@@ -15,11 +15,18 @@ public class PlaygroundErros {
     }
 
     private static void exemploArithmeticException(Scanner ler) {
-        System.out.println("Informe o primeiro numero: ");
-        int n1 = ler.nextInt();
-        System.out.println("Informe o segundo numero: ");
-        int n2 = ler.nextInt();
-        int resultado = n1/n2;
+        
+        try{
+            System.out.println("Informe o primeiro numero: ");
+            int n1 = ler.nextInt();
+            System.out.println("Informe o segundo numero: ");
+            int n2 = ler.nextInt();
+            int resultado = n1/n2;
         System.out.println(" Resultado: " + resultado);
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println(" Um numero não pode ser dividido por zero!! ");
+        }
+        
     }
 }
