@@ -8,9 +8,10 @@ public class PlaygroundErros {
     public static void main(String[] args) {
         System.out.println("==== Bem vindos ao show de horrores do Java ===== \n");
         Scanner ler = new Scanner(System.in);
-        
+        //Erros com operações matemáticas
         exemploArithmeticException(ler);
-        
+        //esse acontece quando tenta acessa um valor que não existe
+        exemploIndexOfBoundsException(ler);
         ler.close();
         System.out.println(" === Sobrevivemos ===");
     }
@@ -32,5 +33,10 @@ public class PlaygroundErros {
         }catch(Exception e){
             System.out.println("Erro inesperado ...");
         }
+    }
+
+    private static void exemploIndexOfBoundsException(Scanner ler) {
+        String[] nomes = {"Joao", "Maria", "Jose"};
+        System.out.println("Informe a posição do nome que deseja ver: ");
     }
 }
