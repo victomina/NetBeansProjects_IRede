@@ -16,7 +16,7 @@ public class PlaygroundErros {
         //esse acontece quando tenta acessa um valor que não existe
         // exemploIndexOfBoundsException(ler);
         //exemploIOException();
-        
+        exemploNullPointer();
         ler.close();
         System.out.println(" === Sobrevivemos ===");
     }
@@ -59,6 +59,15 @@ public class PlaygroundErros {
             System.out.println("Linha do arquivo : " + linha);
         }catch(IOException e){
             System.out.println("Nao foi possivel ler o arquivo ..\n" + e.getMessage());
+        }
+    }
+
+    private static void exemploNullPointer() {
+        try{
+            String texto = null;
+            System.out.println("Tamanho do texto: " + texto.length());  
+        }catch(NullPointerException e){
+            System.out.println("Texto não existe");
         }
     }
 }
