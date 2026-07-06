@@ -1,5 +1,6 @@
 package br.org.irede.poo.playgrounderros;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class PlaygroundErros {
@@ -23,10 +24,13 @@ public class PlaygroundErros {
             int n2 = ler.nextInt();
             int resultado = n1/n2;
         System.out.println(" Resultado: " + resultado);
-        }catch(Exception e){
-            e.printStackTrace();
+        }catch(ArithmeticException e){
+            //e.printStackTrace();
             System.out.println(" Um numero não pode ser dividido por zero!! ");
-        }
+        }catch(InputMismatchException e){
+            System.out.println("Dados Inválidos ... ");
+        }catch(Exception e){
+            System.out.println("Erro inesperado ...");
         
     }
 }
