@@ -36,7 +36,15 @@ public class PlaygroundErros {
     }
 
     private static void exemploIndexOfBoundsException(Scanner ler) {
-        String[] nomes = {"Joao", "Maria", "Jose"};
-        System.out.println("Informe a posição do nome que deseja ver: ");
+        String [] nomes = {"Jose", "Maria", "Joao"};
+        System.out.println("Informe a posicao do nome que deseja verificar: " );
+        int indice = ler.nextInt();
+        try{
+            String nome = nomes [indice];
+            System.out.println("Informe a posição do nome que deseja ver: "+ nome);
+        }catch(IndexOutOfBoundsException e){
+                System.out.println("A posição :" + indice + "nao existe " );
+        }
+        
     }
 }
