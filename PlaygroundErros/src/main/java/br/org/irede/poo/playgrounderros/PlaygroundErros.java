@@ -1,5 +1,8 @@
 package br.org.irede.poo.playgrounderros;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -9,9 +12,11 @@ public class PlaygroundErros {
         System.out.println("==== Bem vindos ao show de horrores do Java ===== \n");
         Scanner ler = new Scanner(System.in);
         //Erros com operações matemáticas
-        exemploArithmeticException(ler);
+        //exemploArithmeticException(ler);
         //esse acontece quando tenta acessa um valor que não existe
-        exemploIndexOfBoundsException(ler);
+        // exemploIndexOfBoundsException(ler);
+        //exemploIOException();
+        
         ler.close();
         System.out.println(" === Sobrevivemos ===");
     }
@@ -46,5 +51,14 @@ public class PlaygroundErros {
                 System.out.println("A posição :" + indice + "nao existe " );
         }
         
+    }
+
+    private static void exemploIOException() {
+        try(BufferedReader leitor = new BufferedReader(new FileReader("dados.txt"))){
+            String linha = leitor.readLine();
+            System.out.println("Linha do arquivo : " + linha);
+        }catch(IOException e){
+            System.out.println("Nao foi possivel ler o arquivo ..\n" + e.getMessage());
+        }
     }
 }
