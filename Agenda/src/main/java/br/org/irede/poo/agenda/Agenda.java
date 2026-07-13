@@ -15,7 +15,7 @@ public class Agenda {
         for (int i = 0; i < contatos.length; i ++){
             contatos[i] = criarContato();
         }
-        exibeContatos(contatos);
+        exibeDados(contatos);
     }
     
     public static Contato criarContato(){
