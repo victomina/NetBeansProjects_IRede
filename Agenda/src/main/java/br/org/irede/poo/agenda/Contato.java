@@ -7,9 +7,9 @@ package br.org.irede.poo.agenda;
 public class Contato {
     private String nome;
     private String telefone;
-    private String identificador;
+    private int identificador;
 
-    public Contato(String nome, String telefone, String identificador) {
+    public Contato(String nome, String telefone, int identificador) {
         this.nome = nome;
         this.telefone = telefone;
         this.identificador = identificador;
@@ -31,11 +31,11 @@ public class Contato {
         this.telefone = telefone;
     }
 
-    public String getIdentificador() {
+    public int getIdentificador() {
         return identificador;
     }
 
-    public void setIdentificador(String identificador) {
+    public void setIdentificador(int identificador) {
         this.identificador = identificador;
     }
    

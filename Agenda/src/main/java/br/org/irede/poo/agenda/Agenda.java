@@ -20,14 +20,14 @@ public class Agenda {
     
     public static Contato criarContato(){
        try{
-           Contato c = new Contato();
-           c.setNome(capturaTexto("Informe o nome"));
-           c.setTelefone(capturaTexto("Informe o telefone"));
-           validarContato(c.getTelefone());
+           Contato contato = new Contato();
+           contato.setNome(capturaTexto("Informe o nome"));
+           contato.setTelefone(capturaTexto("Informe o telefone"));
+           validarContato(contato.getTelefone());
            contador = contador +1;
-           c.setIdentificador(contador);
-           return c;
-       }catch(contatoDuplicadoException e){
+           contato.setIdentificador(contador);
+           return contato;
+       }catch(ContatoDuplicadoException e){
            JOptionPane.showMessageDialog(null, e.getMessage(), ".:Sistema de Agenda:.", JOptionPane.ERROR_MESSAGE );
        } 
        return null;
@@ -47,7 +47,7 @@ public class Agenda {
     
     public static void exibeDados(Contato[] contatos){
         String mensagem = "";
-        for (Contato contato : contato){
+        for (Contato contato : contatos){
             mensagem = mensagem + contato + "\n";
         }
         JOptionPane.showMessageDialog(null, mensagem, "Contato", JOptionPane.INFORMATION_MESSAGE);
