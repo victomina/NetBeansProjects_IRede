@@ -1,10 +1,11 @@
-package br.org.irede.poo.agenda_v2;
+package br.org.irede.poo.agenda2;
 
 /**
  *
- * @author Victor Veríssimo
+ * @author Usuário
  */
 public class Contato {
+
     private String nome;
     private String telefone;
     private int identificador;
@@ -14,7 +15,6 @@ public class Contato {
 //        this.telefone = telefone;
 //        this.identificador = identificador;
 //    }
-
     public String getNome() {
         return nome;
     }
@@ -38,9 +38,9 @@ public class Contato {
     public void setIdentificador(int identificador) {
         this.identificador = identificador;
     }
-   
+
     @Override
-    public String toString(){
+    public String toString() {
         return identificador + " | " + nome + " | " + telefone;
     }
 }
