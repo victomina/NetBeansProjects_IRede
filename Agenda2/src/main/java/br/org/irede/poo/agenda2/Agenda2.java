@@ -13,7 +13,7 @@ public class Agenda2 {
 
         while (continuar) {
             String opcao = JOptionPane.showInputDialog(null,
-                    "===Agenda==="
+                    "===Agenda===\n"
                     + "1 - Cadastrar contato \n"
                     + "2 - Listar contatos \n"
                     + "6 - sair \n\n"
@@ -27,8 +27,10 @@ public class Agenda2 {
             switch (opcao.trim()) {
                 case "1":
                     JOptionPane.showMessageDialog(null, "Cadastro");
+                    break;
                 case "2":
                     JOptionPane.showMessageDialog(null, "Consulta");
+                    break;
                 case "6":
                     continuar = false;
                     break;
