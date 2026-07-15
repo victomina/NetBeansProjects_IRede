@@ -7,13 +7,15 @@ import javax.swing.JOptionPane;
  * @author Usuário
  */
 public class Agenda2 {
+    
+    private static final String ARQUIVO_DADOS = "contatos.txt";
 
     public static void main(String[] args) {
         boolean continuar = true;
 
         while (continuar) {
             String opcao = JOptionPane.showInputDialog(null,
-                    "===Agenda===\n"
+                    ".::Agenda::.\n"
                     + "1 - Cadastrar contato \n"
                     + "2 - Listar contatos \n"
                     + "6 - sair \n\n"
@@ -26,7 +28,8 @@ public class Agenda2 {
             }
             switch (opcao.trim()) {
                 case "1":
-                    JOptionPane.showMessageDialog(null, "Cadastro");
+                    cadastrarContato();
+//                    JOptionPane.showMessageDialog(null, "Cadastro");
                     break;
                 case "2":
                     JOptionPane.showMessageDialog(null, "Consulta");
@@ -41,4 +44,16 @@ public class Agenda2 {
         }
         JOptionPane.showMessageDialog(null, "Até logo");
     }
+
+    private static void cadastrarContato() {
+       Contato contato = new Contato();
+        contato.setNome(capturaTexto("Informe o nome"));
+        contato.setTelefone(capturaTexto("Informe o telefone"));
+     
+    }
+    
+     public static String capturaTexto(String texto){
+        return JOptionPane.showInputDialog(null, texto, ".:Sistema Agenda:.", JOptionPane.QUESTION_MESSAGE);
+    }
+    
 }
