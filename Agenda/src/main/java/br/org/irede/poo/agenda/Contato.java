@@ -9,11 +9,11 @@ public class Contato {
     private String telefone;
     private int identificador;
 
-    public Contato(String nome, String telefone, int identificador) {
-        this.nome = nome;
-        this.telefone = telefone;
-        this.identificador = identificador;
-    }
+//    public Contato(String nome, String telefone, int identificador) {
+//        this.nome = nome;
+//        this.telefone = telefone;
+//        this.identificador = identificador;
+//    }
 
     public String getNome() {
         return nome;
