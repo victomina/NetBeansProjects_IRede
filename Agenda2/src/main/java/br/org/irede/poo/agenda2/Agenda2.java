@@ -39,7 +39,8 @@ public class Agenda2 {
                     continuar = false;
                     break;
                 default:
-                    JOptionPane.showMessageDialog(null, "Opção inválida!! Escolha um numero:(1,2 ou 6)",
+                    JOptionPane.showMessageDialog(null, "Opção inválida!! "
+                            + "Escolha um numero:(1,2 ou 6)",
                             "Erro", JOptionPane.ERROR_MESSAGE);
             }
         }
@@ -54,6 +55,8 @@ public class Agenda2 {
     }
     
      public static String capturaTexto(String texto){
-         return JOptionPane.showInputDialog(null, texto, ".: Sistema Agenda:.", JOptionPane.QUESTION_MESSAGE);
+         return JOptionPane.showInputDialog(null, texto, ".: Sistema Agenda:.",
+                JOptionPane.QUESTION_MESSAGE);
+         
     }
 }
