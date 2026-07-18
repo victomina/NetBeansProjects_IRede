@@ -9,7 +9,8 @@ import javax.swing.JOptionPane;
 public class Agenda2 {
     
     private static final String ARQUIVO_DADOS = "contatos.txt";
-
+    private static final ContatoRepository repository = new ContatoRepository(ARQUIVO_DADOS);
+    
     public static void main(String[] args) {
         boolean continuar = true;
 
@@ -53,7 +54,6 @@ public class Agenda2 {
     }
     
      public static String capturaTexto(String texto){
-        return JOptionPane.showInputDialog(null, texto, ".:Sistema Agenda:.", JOptionPane.QUESTION_MESSAGE);
+         return JOptionPane.showInputDialog(null, texto, ".: Sistema Agenda:.", JOptionPane.QUESTION_MESSAGE);
     }
-    
 }
