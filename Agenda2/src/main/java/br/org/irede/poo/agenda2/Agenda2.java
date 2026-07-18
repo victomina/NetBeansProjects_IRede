@@ -48,10 +48,19 @@ public class Agenda2 {
     }
 
     private static void cadastrarContato() {
-       Contato contato = new Contato();
+        try{
+        Contato contato = new Contato();
         contato.setNome(capturaTexto("Informe o nome"));
         contato.setTelefone(capturaTexto("Informe o telefone"));
-     
+        repository.cadastrar(contato); 
+        JOptionPane.showMessageDialog(null, "Contato cadastrado com sucesso!!\n" + contato,
+                "Secesso !!",
+                JOptionPane.INFORMATION_MESSAGE);
+        }catch(RuntimeException e){
+        JOptionPane.showMessageDialog(null, e.getMessage() + "Erro",
+                "Secesso !!",
+                JOptionPane.ERROR_MESSAGE);
+        }     
     }
     
      public static String capturaTexto(String texto){
