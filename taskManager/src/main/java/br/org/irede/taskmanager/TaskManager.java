@@ -1,12 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package br.org.irede.taskmanager;
 
 /**
  *
- * @author Usuário
+ * @author Victor Veríssimo
  */
 public class TaskManager {
 
@@ -14,3 +10,4 @@ public class TaskManager {
         System.out.println("Hello World!");
     }
 }
+ 
