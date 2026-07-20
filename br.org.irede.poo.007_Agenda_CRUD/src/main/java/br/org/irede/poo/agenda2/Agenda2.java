@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
  * @author Usuário
  */
 public class Agenda2 {
-    
+    //Versão de backUp-- localizado nos projetos do NetBeans
     private static final String ARQUIVO_DADOS = "contatos.txt";
     private static final ContatoRepository repository = new ContatoRepository(ARQUIVO_DADOS);
     
