@@ -1,5 +1,6 @@
 package br.org.irede.poo.agenda2;
 
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -33,7 +34,6 @@ public class Agenda2 {
             switch (opcao.trim()) {
                 case "1":
                     cadastrarContato();
-//                    JOptionPane.showMessageDialog(null, "Cadastro");
                     break;
                 case "2":
                     listarContatos();
@@ -41,15 +41,12 @@ public class Agenda2 {
                     break;
                 case "3":
                     buscarContato();
-//                    JOptionPane.showMessageDialog(null, "Cadastro");
                     break;
                 case "4":
                     atualizarContato();
-//                    JOptionPane.showMessageDialog(null, "Cadastro");
                     break;
                 case "5":
                     excluirContato();
-//                    JOptionPane.showMessageDialog(null, "Cadastro");
                     break;
                 case "6":
                     continuar = false;
@@ -80,22 +77,37 @@ public class Agenda2 {
     }
     
     private static void listarContatos(){
-    
+        List<Contato> contatos = repository.listar();
+        StringBuilder sb = new StringBuilder();
+        for(Contato c : contatos){
+           sb.append(c);
+           sb.append("\n");
+        }
+        JOptionPane.showMessageDialog(null, sb.toString());
     }
     
     private static void buscarContato(){
-        int id = 0;
-        repository.buscar(id);
+        String texto = capturaTexto("Informe o ID");
+        int id = Integer.parseInt(texto);
+        Contato contato = repository.buscar(id);
+        if(contato == null){
+            JOptionPane.showMessageDialog(null,"Contato não encontrado.");
+        }
+        JOptionPane.showMessageDialog(null, contato);
     }
     
     private static void atualizarContato(){
-        Contato contato = null;
-        repository.atualizar(contato);
+          int id = Integer.parseInt(capturaTexto("Informe o ID"));
+          Contato contato = repository.buscar(id);
+          String nome = capturaTexto("Novo nome");
+          contato.setNome(nome);
+          repository.atualizar(contato);
     }
     
     private static void excluirContato(){
-        int id = 0;
+        int id = Integer.parseInt(capturaTexto("Informe o ID"));
         repository.excluir(id);
+        JOptionPane.showMessageDialog(null,"Contato excluído.");
     }
     
      public static String capturaTexto(String texto){
