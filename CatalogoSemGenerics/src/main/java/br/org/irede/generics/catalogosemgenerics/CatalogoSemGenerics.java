@@ -1,8 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package br.org.irede.generics.catalogosemgenerics;
+
+import java.util.ArrayList;
 
 /**
  *
@@ -11,6 +9,9 @@ package br.org.irede.generics.catalogosemgenerics;
 public class CatalogoSemGenerics {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        ArrayList lista = new ArrayList<>(); //sem generics
+        lista.add("NOtebook");
+        
+        
     }
 }
